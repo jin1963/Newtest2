@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>KJC Referral + Auto-Staking</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+    <h1>🔥 KJC Referral + Auto-Staking</h1>
+    <p id="walletAddress">❌ Wallet not connected</p>
+    <button onclick="connectWallet()">🔗 Connect Wallet</button>
+
+    <div id="refSection" style="display:none;">
+      <p>🔗 Your Referral Link:</p>
+      <input type="text" id="refLink" readonly />
+      <button onclick="copyRefLink()">📋 Copy Link</button>
+    </div>
+
+    <div>
+      <p>✉️ Enter Referrer Address:</p>
+      <input type="text" id="refInput" placeholder="Referrer Address" />
+      <button onclick="registerReferrer()">📌 Register Referrer</button>
+    </div>
+
+    <div>
+      <p>💸 Amount of USDT to Spend:</p>
+      <input type="number" id="usdtAmount" placeholder="10" />
+      <button onclick="purchase()">💰 Buy and Stake KJC</button>
+    </div>
+
+    <div>
+      <h3>🎁 Claim Referral Reward</h3>
+      <button onclick="claimReferralReward()">Claim Referral Reward</button>
+    </div>
+
+    <div>
+      <h3>📈 Your Stakes</h3>
+      <div id="stakesContainer"></div>
+    </div>
+
+    <p id="status"></p>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/web3@1.10.0/dist/web3.min.js"></script>
+  <script src="config.js"></script>
+  <script src="abi.js"></script>
+  <script src="usdtAbi.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
